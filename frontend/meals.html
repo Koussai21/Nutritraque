@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritraque - Repas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .conteneur {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+        .carte {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .liste-repas {
+            margin-top: 2rem;
+        }
+        .navbar {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="conteneur">
+            <a class="navbar-brand" href="#">Nutritraque</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="dashboard.html">Tableau de bord</a>
+                <a class="nav-link" href="goals.html">Objectifs</a>
+                <a class="nav-link active" href="meals.html">Repas</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="conteneur">
+        <div class="carte">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Ajouter un repas</h2>
+                <form id="formulaireRepas">
+                    <div class="mb-3">
+                        <label for="nomPlat" class="form-label">Nom du plat</label>
+                        <input type="text" class="form-control" id="nomPlat" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="calories" class="form-label">Calories (kcal)</label>
+                        <input type="number" class="form-control" id="calories" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="proteines" class="form-label">Protéines (g)</label>
+                        <input type="number" class="form-control" id="proteines" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lipides" class="form-label">Lipides (g)</label>
+                        <input type="number" class="form-control" id="lipides" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="glucides" class="form-label">Glucides (g)</label>
+                        <input type="number" class="form-control" id="glucides" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ajouter le repas</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="carte liste-repas">
+            <div class="card-body">
+                <h3 class="card-title mb-4">Liste des repas</h3>
+                <div id="listeRepas" class="list-group"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

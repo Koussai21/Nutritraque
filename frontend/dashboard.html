@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritraque - Tableau de bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .conteneur {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+        .carte {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .barre-progression {
+            height: 25px;
+            margin-bottom: 1rem;
+        }
+        .info-nutriment {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .navbar {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="conteneur">
+            <a class="navbar-brand" href="#">Nutritraque</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="dashboard.html">Tableau de bord</a>
+                <a class="nav-link" href="goals.html">Objectifs</a>
+                <a class="nav-link" href="meals.html">Repas</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="conteneur">
+        <div class="carte">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Progression de vos objectifs</h2>
+                <div id="progressionObjectifs">
+                    <div class="info-nutriment">
+                        <span>Calories</span>
+                        <span id="progressionCalories">0/0 kcal</span>
+                    </div>
+                    <div class="barre-progression">
+                        <div id="barreCalories" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+
+                    <div class="info-nutriment">
+                        <span>Protéines</span>
+                        <span id="progressionProteines">0/0 g</span>
+                    </div>
+                    <div class="barre-progression">
+                        <div id="barreProteines" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+
+                    <div class="info-nutriment">
+                        <span>Lipides</span>
+                        <span id="progressionLipides">0/0 g</span>
+                    </div>
+                    <div class="barre-progression">
+                        <div id="barreLipides" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+
+                    <div class="info-nutriment">
+                        <span>Glucides</span>
+                        <span id="progressionGlucides">0/0 g</span>
+                    </div>
+                    <div class="barre-progression">
+                        <div id="barreGlucides" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carte">
+            <div class="card-body">
+                <h3 class="card-title mb-4">Derniers repas</h3>
+                <div id="repasRecents" class="list-group"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
